@@ -1,0 +1,33 @@
+name: Docker Image CI
+
+on:
+  push:
+    branches: 
+      - main
+    paths:
+      - Golang
+        -1.15-alpine-fuzz
+          -Dockerfile
+        -1.15-alpine
+          -Dockerfile
+        -1.17-alpine-fuzz
+          -Dockerfile
+        -1.17-alpine
+          -Dockerfile
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  docker:
+    runs-on: ubuntu-latest
+    steps:
+       - name: Verify Dockerfile changed
+         uses: tj-actions/verify-changed-files@v5.5
+         id: changed_files
+         with:
+           files: |
+              Dockerfile
+       - name: Display changed files
+         if: steps.changed_files.outputs.files_changed == 'true'
+         run: docker build ./Dockerfile && other stuff
+         
