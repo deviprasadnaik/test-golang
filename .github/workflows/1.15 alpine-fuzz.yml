@@ -1,4 +1,4 @@
-name: 1.15 alpine-fuzz CI
+name: golang/1.15 alpine-fuzz
 
 on:
   push:
