@@ -5,7 +5,7 @@ on:
     branches: 
       - main
     paths:
-      - golang/1.15-alpine/**
+      - Golang/1.15-alpine/**
   pull_request:
     branches: [ main ]
 
@@ -25,5 +25,5 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           context: .
-          file: ./golang/1.15-alpine/Dockerfile
+          file: ./Golang/1.15-alpine/Dockerfile
          
