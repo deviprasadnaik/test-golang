@@ -1,4 +1,4 @@
-name: Docker Image CI
+name: 1.15 alpine-fuzz CI
 
 on:
   push:
