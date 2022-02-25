@@ -5,7 +5,7 @@ on:
     branches: 
       - main
     paths:
-      - 1.15-alpine-fuzz/**
+      - Golang/1.15-alpine-fuzz/**
   pull_request:
     branches: [ main ]
 
