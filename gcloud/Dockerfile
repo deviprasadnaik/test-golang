@@ -13,5 +13,4 @@ RUN cd /tmp \
 
 RUN apk update \
   && apk add jq
-
 RUN gcloud components install kubectl
