@@ -1,4 +1,4 @@
-name: Docker Image CI
+name: golang/1.17-alpine-fuzz
 
 on:
   push:
