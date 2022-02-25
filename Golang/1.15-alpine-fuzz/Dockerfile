@@ -14,4 +14,4 @@ RUN chmod +x /usr/local/bin/gotip
 RUN gotip download dev.fuzz
 RUN mkdir /fuzz
 RUN mv /root/sdk /fuzz/sdk
-RUN chmod -R 777 /fuzz
+
