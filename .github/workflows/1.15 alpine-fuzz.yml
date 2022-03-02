@@ -42,7 +42,7 @@ jobs:
        uses: docker/login-action@v1
        with:
           registry: ghcr.io
-          username: ${{ github.Royalrajesh }}
+          username: ${{ github. }}
           password: ${{ secrets.GOLANG_ALPINE }}
       -
         name: Build and push
