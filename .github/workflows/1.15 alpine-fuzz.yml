@@ -50,6 +50,9 @@ jobs:
         with:
           context: .
           file: ./Golang/1.15-alpine-fuzz/Dockerfile
-          push: true
-          tags: ${{steps.meta.outputs.tags}}
-          labels: ${{steps.meta.outputs.labels}}
+       tags: |
+        golang:<1.15-alpine-fuzz>-latest
+        ghcr.io/golang:<1.15-alpine-fuzz>-latest
+        
+       push: ${{ github.ref == 'refs/heads/main' }}
+       
